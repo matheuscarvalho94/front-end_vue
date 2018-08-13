@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>InfoGlobo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <i class="fas fa-bars"></i>
+            <img src="assets/media/logo.png" alt="">
+        </div>
+    </header>
+<div id="app">
+    <div class="container">
+        <div class="destaques">
+            <div class="item" v-for="dest in destaques.slice(0, 2)">
+                    <a href="#destaques">
+                        <img :src="urlImg + dest.image">
+                    </a>
+                    <div class="info">
+                        <a href="#destaques">
+                            <p>{{ dest.label }}</p>
+                            <p>{{ dest.title }}</p>
+                            <p>{{ dest.description }}</p>
+                        </a>
+                    </div>
+                <a href="#shared">
+                    <img src="assets/media/share_white.png" alt="" class="share_ico">
+                </a>
+            </div>
+        </div>
+
+        <div class="media-destaques">
+            <div class="item" v-for="dest in destaques.slice(2, 4)">
+                <a href="#media-destaques">
+                <img :src="urlImg + dest.image">
+                <div class="info">
+                    <div class="chamada">
+                        <a href="#media-destaques">
+                            <p>{{ dest.label }}</p>
+                            <p>{{ dest.title }}</p>
+                            <p>{{ dest.description }}</p>
+                        </a>
+                    </div>
+                </a>
+                    
+                <a href="#shared">
+                    <img src="assets/media/share_black.png" alt="" class="share_ico">
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mini-destaques">
+            <div class="item" v-for="dest in destaques.slice(4, 8)">
+                <div class="img">
+                    <a href="#mini-destaques">
+                        <img :src="urlImg + dest.image">
+                    </a>
+                </div>
+
+                <div class="info">
+                    <a href="#mini-destaques">
+                        <p>{{ dest.label }}</p>
+                        <p>{{ dest.title }}</p>
+                        <p>{{ dest.description }}</p>
+                    </a>
+                </div>
+                
+                <a href="#shared">
+                    <img src="assets/media/share_black.png" alt="" class="share_ico">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-publicidade">
+        <img src="assets/media/banner_publicidade.png" alt="">
+        <img src="assets/media/320x100.png" alt="" class="bannerMobile">
+    </div>
+
+    <div class="container" id="app">
+        <div class="others-destaques">
+            <h2>BRASIL</h2>
+            <div class="center">
+                <div class="item" v-for="bra in brasil.slice(0, 4)">
+                    <div class="img">
+                        <a href="#brasil">
+                            <img :src="urlImg + bra.image">
+                        </a>
+                    </div>
+
+                    <div class="info">
+                        <a href="#brasil">
+                            <p>{{ bra.label }}</p>
+                            <p>{{ bra.title }}</p>
+                            <p>{{ bra.description }}</p>
+                        </a>
+                    </div>
+                    <a href="#social">
+                        <img src="assets/media/share_black.png" alt="" class="share_ico">
+                    </a>
+                </div>
+            </div>
+            <div class="ver-mais">
+                <a href="#">
+                    BRASIL +
+                </a>
+            </div>
+        </div>
+
+        <div class="others-destaques">
+                <h2>Mundo</h2>
+                <div class="center">
+                    <div class="item" v-for="mund in mundo.slice(0, 4)">
+                        <div class="img">
+                            <a href="#mundo">
+                                <img :src="urlImg + mund.image">
+                            </a>
+                        </div>
+    
+                        <div class="info">
+                            <a href="#mundo">
+                                <p>{{ mund.label }}</p>
+                                <p>{{ mund.title }}</p>
+                                <p>{{ mund.description }}</p>
+                            </a>
+                        </div>
+
+                        <a href="#mundo">
+                        <img src="assets/media/share_black.png" alt="" class="share_ico">
+                        </a>
+                    </div>
+                </div>
+                <div class="ver-mais">
+                    <a href="#">
+                        Mundo +
+                    </a>
+                </div>
+        </div>
+    </div>
+
+</div>
+
+    <footer>    
+        <div class="container">
+            <img src="assets/media/logofooter.png" alt="">
+
+            <p>COPYRIGHT © 2017<br>TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+        <p class="footermobile">COPYRIGHT © 2017<br>TODOS OS DIREITOS RESERVADOS</p>
+    </footer>
+
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>
